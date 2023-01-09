@@ -1,0 +1,114 @@
+@import "config";
+@import "menu";
+@import "home";
+@import "products";
+@import "speaker-zx9";
+@import "speaker-zx7";
+@import "earphone-yx1";
+@import "audio-gear";
+@import "footer";
+@import "./cart";
+@import "./checkout";
+@import "../headphones/product-xx99";
+@import "../earphones/earphones";
+@import "../headphones/headphones";
+@import "../speakers/speakers";
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+body {
+  color: $primary-color;
+  height: 100vh;
+  font-family: "Manrope";
+  line-height: 1;
+}
+main {
+  // padding-top: 6.9rem;
+  margin-bottom: 50px;
+}
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+header {
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 4.2rem;
+  padding-top: 3.2rem;
+  background-color: $secondary-color;
+}
+.headline {
+  font-weight: bold;
+  color: $primary-color;
+  font-size: 2rem;
+  margin-left: auto;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+}
+.cart-container {
+  position: relative;
+  margin-right: 24px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.cart-container:not(.empty)::before {
+  content: attr(data-count);
+  height: 13px;
+  width: 13px;
+  font-size: 6px;
+  background: $active-color;
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 10px;
+  color: $primary-color;
+  right: 0;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  position: absolute;
+  top: 9rem;
+  width: 100%;
+  background-color: $primary-color;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  left: 0;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+@include media-md {
+  .headline {
+    margin: 0px;
+  }
+}
+@include media-lg {
+  header {
+    width: 100%;
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 3.3rem;
+  }
+  .headline {
+    order: 0;
+    margin-right: 19.7rem;
+    margin-top: 3.9rem;
+  }
+  .cart-container {
+    order: 2;
+    margin-top: 3.9rem;
+  }
+}

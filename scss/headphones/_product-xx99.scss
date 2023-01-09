@@ -1,0 +1,405 @@
+//@import "../home/main.scss";
+@import "../home/config";
+@import "../home/menu";
+@import "../home/home";
+@import "../home/products";
+@import "../home/audio-gear";
+@import "../home/footer";
+@import "./images";
+@import "./choice";
+.back-btn {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: $secondary-color;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-top: 10.6rem;
+  margin-left: 2.4rem;
+}
+.main-product {
+  padding: 2.4rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__img-xx99-mark2 {
+    width: 32.7rem;
+    height: 32.7rem;
+    background: url("../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg")
+      no-repeat;
+    background-size: cover;
+    margin-bottom: 3.2rem;
+  }
+  &__img-xx99-mark1 {
+    width: 32.7rem;
+    height: 32.7rem;
+    background: url("../assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg")
+      no-repeat;
+    background-size: cover;
+    margin-bottom: 3.2rem;
+  }
+  &__img-xx59 {
+    width: 32.7rem;
+    height: 32.7rem;
+    background: url("../assets/product-xx59-headphones/mobile/image-category-page-preview.jpg")
+      no-repeat;
+    background-size: cover;
+    margin-bottom: 3.2rem;
+  }
+  &__img-zx9-speaker {
+    background: url("../assets/product-zx9-speaker/mobile/image-category-page-preview.jpg")
+      no-repeat;
+    background-size: cover;
+    margin-bottom: 3.2rem;
+    width: 32.7rem;
+    height: 32.7rem;
+  }
+  &__img-zx7-speaker {
+    background: url("../assets/product-zx7-speaker/mobile/image-category-page-preview.jpg")
+      no-repeat;
+    background-size: cover;
+    margin-bottom: 3.2rem;
+    width: 32.7rem;
+    height: 32.7rem;
+  }
+  &__img-yx1-earphone {
+    background: url("../assets//product-yx1-earphones/mobile/image-category-page-preview.jpg")
+      no-repeat;
+    background-size: cover;
+    margin-bottom: 3.2rem;
+    width: 32.7rem;
+    height: 32.7rem;
+  }
+  &__status {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: $active-color;
+    margin-bottom: 2.4rem;
+  }
+  &__headline {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 2.4rem;
+  }
+  &__paragraph {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: $secondary-color;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-bottom: 2.4rem;
+  }
+  &__price {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 3.1rem;
+  }
+  &__cart-container {
+    display: flex;
+    column-gap: 1.6rem;
+    &__amount {
+      display: flex;
+      padding: 1.5rem;
+      background: #f1f1f1;
+      column-gap: 2rem;
+      &__plus,
+      &__minus {
+        @include change-amount;
+      }
+      &__number {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $secondary-color;
+      }
+    }
+    &__add {
+      padding: 1.5rem 3.05rem 1.5rem 3.45rem;
+      border: none;
+      background-color: $active-color;
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+}
+.features {
+  margin-top: 8.8rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    &__heading {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.857143px;
+      text-transform: uppercase;
+      color: $secondary-color;
+    }
+    &__paragraph {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      color: $secondary-color;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
+}
+.box {
+  margin-top: 8.8rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    &__heading {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.857143px;
+      text-transform: uppercase;
+      color: $secondary-color;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.8rem;
+    }
+    &__content div {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      color: $secondary-color;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    &__content div span {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 25px;
+      color: $active-color;
+      margin-right: 2.1rem;
+      opacity: 1;
+    }
+  }
+}
+@include media-md {
+  .back-btn {
+    margin-left: 4rem;
+    margin-top: 3.3rem;
+  }
+  .main-product {
+    padding-right: 3.95rem;
+    padding-left: 3.9rem;
+    &__container {
+      flex-direction: row;
+      column-gap: 6.9rem;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &__img-xx99-mark2 {
+      background: url("../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg")
+        no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-color: #f1f1f1;
+      width: 28.1rem;
+      height: 48rem;
+    }
+    &__img-xx99-mark1 {
+      background: url("../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg")
+        no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-color: #f1f1f1;
+      width: 28.1rem;
+      height: 48rem;
+    }
+    &__img-xx59 {
+      background: url("../assets/product-xx59-headphones/tablet/image-product.jpg")
+        no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-color: #f1f1f1;
+      width: 28.1rem;
+      height: 48rem;
+    }
+    &__img-zx9-speaker {
+      background: url("../assets/product-zx9-speaker/tablet/image-product.jpg")
+        no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-color: #f1f1f1;
+      width: 28.1rem;
+      height: 48rem;
+    }
+    &__img-zx7-speaker {
+      background: url("../assets/product-zx7-speaker/tablet/image-product.jpg")
+        no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-color: #f1f1f1;
+      width: 28.1rem;
+      height: 48rem;
+    }
+    &__img-yx1-earphone {
+      background: url("../assets//product-yx1-earphones/tablet/image-product.jpg")
+        no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-color: #f1f1f1;
+      width: 28.1rem;
+      height: 48rem;
+    }
+    &__wrapper {
+      width: 33.95rem;
+    }
+  }
+  .box {
+    margin-top: 12rem;
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      &__content {
+        margin-right: 18rem;
+      }
+    }
+  }
+  .features {
+    margin-top: 12rem;
+    padding-left: 4rem;
+    padding-right: 3.9rem;
+  }
+}
+@include media-lg {
+  .back-btn {
+    margin-top: 7.9rem;
+    margin-left: 16.5rem;
+  }
+  .main-product {
+    margin-top: 5.6rem;
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+    &__container {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 12.4rem;
+    }
+    &__img-xx99-mark2 {
+      background: url("../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg")
+        no-repeat;
+      background-size: 100% 100%;
+      width: 54rem;
+      height: 56rem;
+    }
+    &__img-xx99-mark1 {
+      background: url("../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg")
+        no-repeat;
+      background-size: 100% 100%;
+      width: 54rem;
+      height: 56rem;
+    }
+    &__img-xx59 {
+      background: url("../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg")
+        no-repeat;
+      background-size: 100% 100%;
+      width: 54rem;
+      height: 56rem;
+    }
+    &__img-zx9-speaker {
+      background: url("../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg")
+        no-repeat;
+      background-size: 100% 100%;
+      width: 54rem;
+      height: 56rem;
+    }
+    &__img-zx7-speaker {
+      background: url("../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg");
+      background-size: 100% 100%;
+      width: 54rem;
+      height: 56rem;
+    }
+    &__img-yx1-earphone {
+      background: url("../assets//product-yx1-earphones/desktop/image-category-page-preview.jpg")
+        no-repeat;
+      background-size: 100% 100%;
+      width: 54rem;
+      height: 56rem;
+    }
+  }
+  .features-box {
+    display: flex;
+    column-gap: 12.5rem;
+    justify-content: space-between;
+  }
+  .box {
+    padding-right: 16.5rem;
+    &__container {
+      flex-direction: column;
+      row-gap: 3.2rem;
+      min-width: 38rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .features {
+    padding-left: 16.5rem;
+    &__container {
+      min-width: 63.5rem;
+    }
+  }
+}

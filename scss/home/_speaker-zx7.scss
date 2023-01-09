@@ -1,0 +1,65 @@
+.speaker-zx7 {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 32px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 327px;
+    min-height: 320px;
+    background-image: url("../assets/product-zx7-speaker/mobile/Bitmap.png");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  &__headline {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 101px;
+    margin-left: 7.33%;
+    color: $secondary-color;
+    z-index: 10;
+  }
+  &__link {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    width: 175px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 32px;
+    // margin-left: 25.5px;
+    margin-left: 7.33%;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+    padding: 15px 29.5px 15px 31.5px;
+  }
+}
+@include media-md {
+  .speaker-zx7 {
+    &__container {
+      background-image: url("../assets/product-zx7-speaker/tablet/Bitmap.png");
+    }
+  }
+}
+@include media-lg {
+  .speaker-zx7 {
+    margin-left: 165px;
+    margin-right: 165px;
+    &__container {
+      background-image: url("../assets/product-zx7-speaker/desktop/Bitmap.png");
+    }
+    &__img {
+      height: 100%;
+    }
+  }
+}

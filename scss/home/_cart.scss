@@ -1,0 +1,206 @@
+@import "./config";
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.cart {
+  z-index: 3;
+  min-width: 32.7rem;
+  position: absolute;
+  top: 11.4rem;
+  left: 2.4rem;
+  padding: 3.2rem 2.8rem 3.1rem 2.8rem;
+  background-color: $primary-color;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: repeat(2, 1fr);
+  transition: 5s;
+  &__headline {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: $secondary-color;
+    grid-row-start: 1;
+  }
+  &__remove {
+    grid-row: 1;
+    grid-column-start: 2;
+    align-self: start;
+    justify-self: end;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-decoration-line: underline;
+    color: $secondary-color;
+    mix-blend-mode: normal;
+    background-color: transparent;
+    opacity: 0.5;
+    border: none;
+    cursor: pointer;
+  }
+  &__remove:hover {
+    color: $active-color;
+  }
+  &__total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-row: 3;
+    grid-column: 1/3;
+    margin-top: 3.2rem;
+  }
+  &__total > span:nth-child(1) {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: $secondary-color;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  &__total > span:nth-child(2) {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
+  &__checkout {
+    grid-row: 4;
+    grid-column: 1/3;
+    background-color: $active-color;
+    color: $primary-color;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2.4rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    row-gap: 3.1rem;
+  }
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1.6rem;
+    &__img {
+      width: 6.4rem;
+      height: 6.4rem;
+      border-radius: 8px;
+    }
+
+    &__headline {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 25px;
+      color: $secondary-color;
+    }
+    &__price {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 25px;
+      color: $secondary-color;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    &__amount {
+      display: flex;
+      padding: 1.5rem;
+      background: #f1f1f1;
+      column-gap: 2rem;
+      align-items: center;
+      margin-left: auto;
+      &__minus,
+      &__plus {
+        @include change-amount;
+      }
+      &__number {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/3;
+  row-gap: 2rem;
+  &__text {
+    color: #a29c9c;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Manrope";
+  }
+  &__img {
+    filter: invert(100%) sepia(0%) saturate(7445%) hue-rotate(80deg)
+      brightness(116%) contrast(114%);
+    width: 3rem;
+    height: auto;
+  }
+}
+// .cart-container:not(.empty)::after {
+//   content: attr(data-count);
+//   height: 12px;
+//   width: 12px;
+//   font-size: 6px;
+//   background: $active-color;
+//   display: block;
+//   position: absolute;
+//   top: 29px;
+//   color: white;
+//   right: 21px;
+//   border-radius: 50px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+@include media-md {
+  .cart {
+    width: 37.7rem;
+    right: 4rem;
+    left: auto;
+  }
+}
+@include media-lg {
+  .cart {
+    min-width: 37.7rem;
+    right: 16.5rem;
+    top: 12.2rem;
+    left: auto;
+  }
+}

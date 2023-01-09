@@ -1,0 +1,577 @@
+#checkout-body {
+  background-color: #f2f2f2;
+}
+.checkout {
+  margin-top: 2.4rem;
+  margin-left: 2.4rem;
+  padding-top: 2.4rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-bottom: 3.1rem;
+  background-color: $primary-color;
+  width: 87.2%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+  }
+  &__input-elem {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.9rem;
+  }
+  h2 {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 3.2rem;
+  }
+  h3 {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 0.928571px;
+    text-transform: uppercase;
+    color: $active-color;
+    margin-bottom: 1.6rem;
+  }
+  label,
+  .label {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.214286px;
+    color: $secondary-color;
+  }
+  input {
+    margin-bottom: 2.4rem;
+    height: 5.6rem;
+    padding-top: 0.7rem;
+    padding-left: 2.4rem;
+    border: 1px solid #b4b3b3;
+    border-radius: 8px;
+    height: 5.6rem;
+  }
+  &__radio-elem {
+    margin-bottom: 2.4rem;
+    height: 5.6rem;
+    border: 1px solid #b4b3b3;
+    border-radius: 8px;
+    height: 5.6rem;
+  }
+  &__billing form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.9rem;
+  }
+  &__shipping form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.9rem;
+  }
+  &__payment form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.9rem;
+  }
+  &__radio-elem {
+    display: flex;
+    align-items: center;
+    input {
+      margin-top: 2.3rem;
+      margin-left: 2.1rem;
+      margin-right: 2.1rem;
+      position: relative;
+      width: 20px;
+      height: 20px;
+    }
+    input:checked::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $active-color;
+      box-sizing: border-box;
+      outline: none;
+    }
+    input:checked {
+      outline: none;
+    }
+  }
+}
+.summary {
+  // margin-top: 3.2rem;
+  // //margin-left: auto;
+  // // 2.4rem;
+  // padding-top: 2.4rem;
+  // padding-left: 2.4rem;
+  // padding-right: 2.4rem;
+  // padding-bottom: 3.1rem;
+  // background-color: $primary-color;
+  // width: 87.2%;
+  margin-top: 6.5rem;
+  margin-left: 2.4rem;
+  padding-top: 2.4rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-bottom: 9.7rem;
+  background-color: $primary-color;
+  width: 87.2%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  h3 {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
+  &__pay {
+    background-color: $active-color;
+    border: none;
+    color: $primary-color;
+    padding: 1.5rem 5.3rem 1.5rem 5.8rem;
+    margin-top: 3.2rem;
+    cursor: pointer;
+  }
+  &__pay:hover {
+    opacity: 0.5;
+  }
+  &__content {
+    margin-top: 3.1rem;
+    margin-bottom: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+  }
+  &__info__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 0.8rem;
+  }
+  &__info span:nth-child(1) {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: $secondary-color;
+    opacity: 0.5;
+  }
+  &__info span:nth-child(2) {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
+  .cart__item__amount {
+    background-color: transparent;
+    &__number {
+      opacity: 0.5;
+    }
+  }
+  &__info:last-child {
+    margin-top: 2.4rem;
+  }
+  #grand-total {
+    color: $active-color;
+  }
+}
+.order {
+  position: absolute;
+  top: 22.4rem;
+  left: 2.4rem;
+  right: 2.4rem;
+  padding: 3.2rem;
+  background-color: $primary-color;
+  z-index: 3;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__gratitude {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.857143px;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-top: 2.3rem;
+  }
+  &__paragraph {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: $secondary-color;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-top: 1.6rem;
+  }
+  .order__back-btn {
+    background-color: $active-color;
+    border: none;
+    color: $primary-color;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    margin-top: 3.2rem;
+    width: 100%;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    background: #f1f1f1;
+    width: 100%;
+    padding-top: 3.3rem;
+    padding-bottom: 2.5rem;
+    margin-top: 2.4rem;
+    position: relative;
+    // border-radius: 8px;
+  }
+  .hr {
+    margin-top: 1.2rem;
+    background: $secondary-color;
+    mix-blend-mode: normal;
+    opacity: 0.08;
+    height: 1px;
+    width: 81%;
+    align-self: center;
+  }
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 3.5rem;
+    padding-right: 2.4rem;
+    margin-bottom: 1.2rem;
+
+    &__img {
+      width: 2.8rem;
+      height: 3.2rem;
+      margin-right: 2.7rem;
+    }
+    &__info {
+      margin-right: 5.9rem;
+    }
+    &__price,
+    .order__item__amount__number {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 25px;
+      color: $secondary-color;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    .order__item__amount {
+      margin-left: auto;
+    }
+    &__headline {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 25px;
+      color: $secondary-color;
+    }
+  }
+  &__view {
+    border: none;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.214286px;
+    color: $secondary-color;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    align-self: center;
+  }
+  &__grand-total {
+    background-color: $secondary-color;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-left: 2.4rem;
+    padding-bottom: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    &__headline {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      color: $primary-color;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    &__number {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      /* identical to box height */
+
+      text-transform: uppercase;
+
+      color: $primary-color;
+    }
+  }
+}
+.nonactive {
+  display: none;
+}
+@include media-md {
+  .checkout {
+    padding: 2.7rem 2.7rem;
+    margin-top: 4.8rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    width: auto;
+    &__container {
+      padding: 0;
+      margin: 0;
+    }
+    &__billing form {
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(2, min-content);
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.6rem;
+      .checkout__input-elem:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1;
+      }
+      .checkout__input-elem:nth-child(2) {
+        grid-row: 1;
+        grid-column: 2;
+      }
+      .checkout__input-elem:nth-child(3) {
+        grid-row: 2;
+        grid-column: 1;
+      }
+    }
+    &__shipping form {
+      display: grid;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.6rem;
+      .checkout__input-elem:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1/3;
+      }
+      .checkout__input-elem:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+      }
+      .checkout__input-elem:nth-child(3) {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      .checkout__input-elem:nth-child(4) {
+        grid-row: 3;
+        grid-column: 1;
+      }
+    }
+    &__payment form {
+      display: grid;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.6rem;
+      .label {
+        grid-row: 1;
+        grid-column: 1;
+      }
+      .checkout__radio-elem:nth-child(1) {
+        grid-row: 1;
+        grid-column: 2;
+      }
+      .checkout__radio-elem:nth-child(2) {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      #money-number {
+        grid-row: 3;
+        grid-column: 1;
+      }
+      #money-pin {
+        grid-row: 3;
+        grid-column: 2;
+      }
+    }
+    h3 {
+      grid-row: 1/2;
+    }
+  }
+  .summary {
+    margin-left: 3.9rem;
+    margin-right: 4rem;
+    margin-bottom: 11.6rem;
+    width: 89.7%;
+  }
+  .order {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    width: 70.3%;
+    margin: auto;
+    &__info {
+      flex-direction: row;
+      align-content: center;
+    }
+    &__items {
+      margin-top: 3.3rem;
+    }
+    &__grand-total {
+      width: 44%;
+      margin-top: 3.3rem;
+      padding-top: 4.1rem;
+      align-self: stretch;
+    }
+  }
+}
+@include media-lg {
+  .checkout-and-summary {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 4rem;
+  }
+  .checkout {
+    padding: 2.7rem 2.7rem;
+    margin-top: 14.2rem;
+    margin-left: 16.5rem;
+    margin-right: 0;
+    width: 50%;
+    &__container {
+      padding: 0;
+      margin: 0;
+    }
+    &__billing form {
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(2, min-content);
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.6rem;
+      .checkout__input-elem:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1;
+      }
+      .checkout__input-elem:nth-child(2) {
+        grid-row: 1;
+        grid-column: 2;
+      }
+      .checkout__input-elem:nth-child(3) {
+        grid-row: 2;
+        grid-column: 1;
+      }
+    }
+    &__shipping form {
+      display: grid;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.6rem;
+      .checkout__input-elem:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1/3;
+      }
+      .checkout__input-elem:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+      }
+      .checkout__input-elem:nth-child(3) {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      .checkout__input-elem:nth-child(4) {
+        grid-row: 3;
+        grid-column: 1;
+      }
+    }
+    &__payment form {
+      display: grid;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.6rem;
+      .label {
+        grid-row: 1;
+        grid-column: 1;
+      }
+      .checkout__radio-elem:nth-child(1) {
+        grid-row: 1;
+        grid-column: 2;
+      }
+      .checkout__radio-elem:nth-child(2) {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      #money-number {
+        grid-row: 3;
+        grid-column: 1;
+      }
+      #money-pin {
+        grid-row: 3;
+        grid-column: 2;
+      }
+    }
+    h3 {
+      grid-row: 1/2;
+    }
+  }
+  .summary {
+    width: 24.3%;
+    margin-top: 14.2rem;
+    margin-left: 0;
+  }
+  .order {
+    width: 37.5%;
+    margin: auto;
+  }
+}

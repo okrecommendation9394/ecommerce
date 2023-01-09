@@ -1,0 +1,109 @@
+.choice {
+  margin-top: 12rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+  &__headline {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.857143px;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
+  &__options {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.6rem;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
+  &__img {
+    background: #f1f1f1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.2rem;
+    padding-bottom: 1.3rem;
+  }
+  &__name {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 1.71429px;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
+  &__link {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $primary-color;
+    padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+    background-color: $active-color;
+    align-self: center;
+  }
+  &__link:hover {
+    opacity: 0.5;
+  }
+}
+@include media-md {
+  .choice {
+    padding-left: 3.9rem;
+    padding-right: 3.8rem;
+    &__options {
+      flex-direction: row;
+      column-gap: 1.1rem;
+      // justify-content: space-between;
+      align-items: stretch;
+      //margin-right: 3.8rem;
+      // margin: auto;
+    }
+    &__item {
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+    }
+    &__img {
+      height: 31.8rem;
+      width: 22.3rem;
+      flex-grow: 1;
+      padding: 0;
+    }
+    // &__img img {
+    //   min-width: 17.552rem;
+    //   height: auto;
+    // }
+  }
+}
+@include media-lg {
+  .choice {
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+    &__options {
+      flex-direction: row;
+    }
+    &__img {
+      width: 35rem;
+      flex-grow: 1;
+    }
+  }
+}

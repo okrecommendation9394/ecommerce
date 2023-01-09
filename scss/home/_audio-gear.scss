@@ -1,0 +1,100 @@
+.audio-gear {
+  margin: auto 24px 120px 24px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__img {
+    display: flex;
+    margin-bottom: 24px;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  &__img > img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    height: auto;
+    flex: 1;
+  }
+  &__headline {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 20px 0 20px;
+    color: $secondary-color;
+    margin-bottom: 32px;
+  }
+  &__headline > span {
+    color: $active-color;
+  }
+  &__paragraph {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+
+    color: $secondary-color;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+}
+@include media-md {
+  .audio-gear {
+    &__container {
+      margin-bottom: 96px;
+    }
+    &__headline {
+      width: 573px;
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+    &__paragraph {
+      max-width: 573px;
+    }
+  }
+}
+@include media-lg {
+  .audio-gear {
+    &__container {
+      margin-bottom: 160px;
+      margin-left: 165px;
+      margin-right: 165px;
+      display: grid;
+      column-gap: 165px;
+      grid-template-areas: "headline img" "paragraph img";
+    }
+    &__headline {
+      grid-area: headline;
+      padding-left: 0;
+      text-align: left;
+      width: 445px;
+      word-break: break-word;
+      padding-right: 30%;
+      align-self: end;
+    }
+    &__img {
+      grid-area: img;
+      width: 540px;
+      height: 588px;
+    }
+    &__paragraph {
+      grid-area: paragraph;
+      padding-left: 0;
+      text-align: left;
+      width: 445px;
+      align-self: start;
+    }
+  }
+}

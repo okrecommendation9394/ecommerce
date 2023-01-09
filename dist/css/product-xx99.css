@@ -1,0 +1,3330 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.menu-btn {
+  z-index: 1;
+  margin-left: 24px;
+  margin-top: 18px;
+  height: 20px;
+  width: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger.open {
+  transform: rotate(720deg);
+  background-color: transparent;
+}
+.menu-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 3px);
+}
+.menu-btn__burger.open::after {
+  transform: rotate(-45deg) translate(3px, -3.5px);
+}
+
+.nav {
+  overflow-x: hidden;
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  opacity: 0.98;
+  visibility: hidden;
+  z-index: 2;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: #fff;
+  list-style-type: none;
+  padding-right: 1rem;
+  padding-bottom: 35px;
+  transform: translateY(-100%);
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+  transform: translateY(0);
+}
+.nav .menu-nav__item {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  width: 327px;
+  height: 217px;
+  margin-left: 24px;
+  cursor: pointer;
+}
+.nav .menu-nav__img {
+  width: 79.92px;
+  height: 104px;
+}
+.nav .menu-nav__img::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 37.5%;
+  width: 30%;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+.nav .menu-nav__shop {
+  color: #000;
+  opacity: 0.5;
+}
+.nav .menu-nav__shop > span {
+  color: #d87d4a;
+  font-weight: bold;
+  opacity: 1;
+}
+.nav .menu-nav__shop:hover {
+  color: #d87d4a;
+}
+.nav .menu-nav__background {
+  position: absolute;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  width: 100%;
+  height: 165px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.nav .menu-nav__link {
+  color: #000;
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .nav {
+    position: relative;
+    visibility: visible;
+    top: 3.5rem;
+    order: 1;
+  }
+  .nav .menu-nav {
+    display: inline-block;
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav__link {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .nav .menu-nav__link:hover {
+    color: #d87d4a;
+  }
+  .nav .menu-nav__img {
+    display: none;
+  }
+  .nav .menu-nav__background {
+    display: none;
+  }
+  .nav .menu-nav__shop {
+    display: none;
+  }
+}
+.home {
+  height: 600px;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: url("../assets/home/mobile/image-header.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-color: #000;
+}
+.home__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 19.8rem;
+  left: 2.3rem;
+  right: 2.4rem;
+}
+.home__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+.home__product {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #fff;
+  max-width: 32.8rem;
+  align-self: center;
+}
+.home__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin-bottom: 2.8rem;
+  max-width: 32.8rem;
+  align-self: center;
+}
+.home__btn {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #d87d4a;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    background: url("../assets/home/tablet/image-header.jpg") no-repeat;
+    background-size: 100% 100%;
+  }
+  .home__container {
+    row-gap: 2.4rem;
+  }
+  .home__product {
+    max-width: 39.6rem;
+    font-size: 56px;
+  }
+  .home__paragraph {
+    max-width: 34.9rem;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .home {
+    text-align: left;
+    align-items: left;
+    background-image: url("../assets/home/desktop/image-hero.jpg");
+  }
+  .home__container {
+    top: 22.5rem;
+    left: 16.5rem;
+    right: 89.6rem;
+  }
+  .home__paragraph {
+    text-align: left;
+    margin: 0;
+    align-self: flex-start;
+  }
+  .home__btn {
+    align-self: flex-start;
+  }
+  .home__headline {
+    align-self: flex-start;
+    text-align: left;
+    margin: 0;
+    line-height: 40px;
+  }
+  .home__product {
+    align-self: flex-start;
+  }
+}
+.products {
+  margin: 40px 24px auto 24px;
+}
+.products__container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: #fff;
+  margin-bottom: 104px;
+}
+.products__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  width: 327px;
+  height: 217px;
+  margin-bottom: 16px;
+  z-index: 1;
+  cursor: pointer;
+}
+.products__item__background {
+  position: absolute;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  width: 100%;
+  height: 165px;
+  bottom: 0;
+  left: 0;
+}
+.products__item__img {
+  height: 104px;
+  width: 79.9157867432px;
+  border-radius: 0px;
+  z-index: 1;
+}
+.products__item__shop {
+  color: #000;
+  opacity: 0.5;
+  z-index: 1;
+}
+.products__item__shop > span {
+  color: #d87d4a;
+  font-weight: bold;
+  opacity: 1;
+  z-index: 1;
+}
+.products__item__shop:hover {
+  color: #d87d4a;
+}
+.products__item__link {
+  z-index: 1;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .products__container {
+    flex-direction: row;
+    margin-bottom: 9%;
+    gap: 10px;
+  }
+  .products__item {
+    width: 29.03%;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .products__container {
+    flex-direction: row;
+    margin-bottom: 9%;
+    gap: 30px;
+  }
+  .products__item {
+    width: 24.3%;
+    margin-bottom: 0px;
+    height: 284px;
+  }
+  .products__background {
+    height: 204px;
+  }
+}
+.speaker-zx9 {
+  margin: auto 2.4rem 2.4rem 2.4rem;
+}
+.speaker-zx9__container {
+  background-color: #d87d4a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  height: 600px;
+}
+.speaker-zx9__img {
+  margin-top: 55px;
+  margin-bottom: 32px;
+  width: 172.25px;
+  height: 207px;
+  z-index: 1;
+}
+.speaker-zx9__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 24px;
+  z-index: 1;
+}
+.speaker-zx9__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin: 0 24px 23px 24px;
+  z-index: 1;
+  width: 280px;
+}
+.speaker-zx9__link {
+  border: 1px solid #000;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  background-color: #000;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1;
+}
+.speaker-zx9__circles {
+  position: absolute;
+  width: 327px;
+  height: 470px;
+  z-index: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .speaker-zx9 {
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+  .speaker-zx9__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 13.828rem;
+         column-gap: 13.828rem;
+  }
+  .speaker-zx9__headline {
+    text-align: left;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    align-self: start;
+  }
+  .speaker-zx9__link {
+    margin: 0;
+    grid-row-start: 3;
+    grid-column-start: 2;
+    align-self: end;
+  }
+  .speaker-zx9__paragraph {
+    margin: 0;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    text-align: left;
+    align-self: end;
+  }
+  .speaker-zx9__img {
+    margin: 0;
+    grid-row: 2/span 2;
+    grid-column-start: 1;
+    height: 100%;
+    align-self: end;
+    justify-self: end;
+    width: 41.023rem;
+  }
+}
+.speaker-zx7 {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 32px;
+}
+.speaker-zx7__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 327px;
+  min-height: 320px;
+  background-image: url("../assets/product-zx7-speaker/mobile/Bitmap.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+.speaker-zx7__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 101px;
+  margin-left: 7.33%;
+  color: #000;
+  z-index: 10;
+}
+.speaker-zx7__link {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  width: 175px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 32px;
+  margin-left: 7.33%;
+  color: #000;
+  border: 1px solid #000;
+  padding: 15px 29.5px 15px 31.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .speaker-zx7__container {
+    background-image: url("../assets/product-zx7-speaker/tablet/Bitmap.png");
+  }
+}
+@media screen and (min-width: 1440px) {
+  .speaker-zx7 {
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+  .speaker-zx7__container {
+    background-image: url("../assets/product-zx7-speaker/desktop/Bitmap.png");
+  }
+  .speaker-zx7__img {
+    height: 100%;
+  }
+}
+.earphone-yx1 {
+  margin: 24px 24px 120px 24px;
+}
+.earphone-yx1__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.earphone-yx1__img {
+  display: flex;
+  margin-bottom: 24px;
+}
+.earphone-yx1__img > img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+  flex: 1;
+}
+.earphone-yx1__info {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  height: 200px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+.earphone-yx1__headline {
+  position: absolute;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  top: 41px;
+  left: 24px;
+  color: #000;
+}
+.earphone-yx1__link {
+  position: absolute;
+  top: 111px;
+  left: 24px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  border: 1px solid #000;
+  padding: 15px 29.5px 15px 31.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .earphone-yx1__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+    height: 320px;
+    margin-bottom: 20%;
+  }
+  .earphone-yx1__img {
+    grid-column-start: 1;
+    height: 100%;
+  }
+  .earphone-yx1__info {
+    grid-column-start: 2;
+    height: 100%;
+  }
+  .earphone-yx1__headline {
+    top: 101px;
+    left: 41px;
+  }
+  .earphone-yx1__link {
+    top: 171px;
+    left: 41px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .earphone-yx1 {
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+  .earphone-yx1__container {
+    margin-bottom: 200px;
+  }
+  .earphone-yx1__headline {
+    left: 17.5%;
+  }
+  .earphone-yx1__link {
+    left: 17.5%;
+  }
+}
+.audio-gear {
+  margin: auto 24px 120px 24px;
+}
+.audio-gear__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.audio-gear__img {
+  display: flex;
+  margin-bottom: 24px;
+  height: 300px;
+  margin-bottom: 40px;
+}
+.audio-gear__img > img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  height: auto;
+  flex: 1;
+}
+.audio-gear__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0 20px 0 20px;
+  color: #000;
+  margin-bottom: 32px;
+}
+.audio-gear__headline > span {
+  color: #d87d4a;
+}
+.audio-gear__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .audio-gear__container {
+    margin-bottom: 96px;
+  }
+  .audio-gear__headline {
+    width: 573px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .audio-gear__paragraph {
+    max-width: 573px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .audio-gear__container {
+    margin-bottom: 160px;
+    margin-left: 165px;
+    margin-right: 165px;
+    display: grid;
+    -moz-column-gap: 165px;
+         column-gap: 165px;
+    grid-template-areas: "headline img" "paragraph img";
+  }
+  .audio-gear__headline {
+    grid-area: headline;
+    padding-left: 0;
+    text-align: left;
+    width: 445px;
+    word-break: break-word;
+    padding-right: 30%;
+    align-self: end;
+  }
+  .audio-gear__img {
+    grid-area: img;
+    width: 540px;
+    height: 588px;
+  }
+  .audio-gear__paragraph {
+    grid-area: paragraph;
+    padding-left: 0;
+    text-align: left;
+    width: 445px;
+    align-self: start;
+  }
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #101010;
+}
+.footer__border {
+  width: 101px;
+  height: 4px;
+  background-color: #d87d4a;
+  margin-bottom: 48px;
+}
+.footer__headline {
+  margin-bottom: 48px;
+  font-weight: bold;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.footer__menu > li {
+  list-style: none;
+}
+.footer__menu > li > a {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 48px;
+}
+.footer__copyright {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 48px;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.footer__icons {
+  display: flex;
+  color: #fff;
+  gap: 16px;
+  margin-bottom: 38px;
+}
+.footer__icons span a i:hover {
+  color: #d87d4a;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    padding-left: 40px;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 5fr 1fr;
+  }
+  .footer__border {
+    margin-bottom: 56px;
+  }
+  .footer__headline {
+    grid-row-start: 2;
+    margin-bottom: 32px;
+  }
+  .footer__menu {
+    grid-row-start: 3;
+    flex-direction: row;
+    -moz-column-gap: 34px;
+         column-gap: 34px;
+    margin-bottom: 32px;
+  }
+  .footer__paragraph {
+    grid-row-start: 4;
+    margin: 0;
+    margin-bottom: 80px;
+    text-align: left;
+  }
+  .footer__copyright {
+    grid-row-start: 5;
+    grid-column-start: 1;
+  }
+  .footer__icons {
+    grid-row-start: 5;
+    grid-column-start: 2;
+    justify-self: end;
+    margin-right: 24px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__container {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr 1fr;
+    padding-left: 165px;
+  }
+  .footer__border {
+    grid-column-start: 1;
+  }
+  .footer__headline {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .footer__menu {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    flex-direction: row;
+    -moz-column-gap: 34px;
+         column-gap: 34px;
+    margin-bottom: 32px;
+    justify-self: end;
+    margin-right: 165px;
+  }
+  .footer__icons {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    margin-right: 165px;
+    align-self: end;
+  }
+  .footer__paragraph {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    width: 540px;
+    margin-bottom: 0;
+  }
+  .footer__copyright {
+    margin-top: 56px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart {
+  min-width: 32.7rem;
+  position: absolute;
+  top: 11.4rem;
+  left: 2.4rem;
+  padding: 3.2rem 2.8rem 3.1rem 2.8rem;
+  background-color: #fff;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: repeat(4, -webkit-min-content);
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: repeat(2, 1fr);
+  transition: 5s;
+}
+.cart__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000;
+  grid-row-start: 1;
+}
+.cart__remove {
+  grid-row: 1;
+  grid-column-start: 2;
+  align-self: start;
+  justify-self: end;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #000;
+  mix-blend-mode: normal;
+  background-color: transparent;
+  opacity: 0.5;
+  border: none;
+  cursor: pointer;
+}
+.cart__remove:hover {
+  color: #d87d4a;
+}
+.cart__total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-row: 3;
+  grid-column: 1/3;
+  margin-top: 3.2rem;
+}
+.cart__total > span:nth-child(1) {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.cart__total > span:nth-child(2) {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+.cart__checkout {
+  grid-row: 4;
+  grid-column: 1/3;
+  background-color: #d87d4a;
+  color: #fff;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 2.4rem;
+}
+.cart__content {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2;
+  grid-column: 1/span 2;
+  row-gap: 3.1rem;
+}
+.cart__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+}
+.cart__item__img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 8px;
+}
+.cart__item__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+}
+.cart__item__price {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.cart__item__amount {
+  display: flex;
+  padding: 1.5rem;
+  background: #f1f1f1;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  align-items: center;
+  margin-left: auto;
+}
+.cart__item__amount__minus, .cart__item__amount__plus {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  cursor: pointer;
+}
+.cart__item__amount__number {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/3;
+  row-gap: 2rem;
+}
+.empty-cart__text {
+  color: #a29c9c;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "Manrope";
+}
+.empty-cart__img {
+  filter: invert(100%) sepia(0%) saturate(7445%) hue-rotate(80deg) brightness(116%) contrast(114%);
+  width: 3rem;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 37.7rem;
+    right: 4rem;
+    left: auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .cart {
+    min-width: 37.7rem;
+    right: 16.5rem;
+    top: 12.2rem;
+    left: auto;
+  }
+}
+#checkout-body {
+  background-color: #f2f2f2;
+}
+
+.checkout {
+  margin-top: 6.5rem;
+  margin-left: 2.4rem;
+  padding-top: 2.4rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-bottom: 3.1rem;
+  background-color: #fff;
+  width: 87.2%;
+}
+.checkout__container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.checkout__input-elem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9rem;
+}
+.checkout h2 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 3.2rem;
+}
+.checkout h3 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 0.928571px;
+  text-transform: uppercase;
+  color: #d87d4a;
+  margin-bottom: 1.6rem;
+}
+.checkout label,
+.checkout .label {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+  color: #000;
+}
+.checkout input {
+  margin-bottom: 2.4rem;
+  height: 5.6rem;
+  padding-top: 0.7rem;
+  padding-left: 2.4rem;
+  border: 1px solid #b4b3b3;
+  border-radius: 8px;
+  height: 5.6rem;
+}
+.checkout__radio-elem {
+  margin-bottom: 2.4rem;
+  height: 5.6rem;
+  border: 1px solid #b4b3b3;
+  border-radius: 8px;
+  height: 5.6rem;
+}
+.checkout__billing form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9rem;
+}
+.checkout__shipping form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9rem;
+}
+.checkout__payment form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9rem;
+}
+.checkout__radio-elem {
+  display: flex;
+  align-items: center;
+}
+.checkout__radio-elem input {
+  margin-top: 2.3rem;
+  margin-left: 2.1rem;
+  margin-right: 2.1rem;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.checkout__radio-elem input:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d87d4a;
+  box-sizing: border-box;
+  outline: none;
+}
+.checkout__radio-elem input:checked {
+  outline: none;
+}
+
+.summary {
+  margin-top: 3.2rem;
+  margin-left: 2.4rem;
+  padding-top: 2.4rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-bottom: 3.1rem;
+  background-color: #fff;
+  width: 87.2%;
+}
+.summary__container {
+  display: flex;
+  flex-direction: column;
+}
+.summary h3 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000;
+}
+.summary__pay {
+  background-color: #d87d4a;
+  border: none;
+  color: #fff;
+  padding: 1.5rem 5.3rem 1.5rem 5.8rem;
+  margin-top: 3.2rem;
+}
+.summary__content {
+  margin-top: 3.1rem;
+  margin-bottom: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+.summary__info__container {
+  display: flex;
+  flex-direction: column;
+}
+.summary__info {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 0.8rem;
+}
+.summary__info span:nth-child(1) {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  opacity: 0.5;
+}
+.summary__info span:nth-child(2) {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #000;
+}
+.summary .cart__item__amount {
+  background-color: transparent;
+}
+.summary .cart__item__amount__number {
+  opacity: 0.5;
+}
+.summary__info:last-child {
+  margin-top: 2.4rem;
+}
+.summary #grand-total {
+  color: #d87d4a;
+}
+
+.order {
+  position: absolute;
+  top: 22.4rem;
+  left: 2.4rem;
+  right: 2.4rem;
+  padding: 3.2rem;
+  background-color: #fff;
+  z-index: 1;
+}
+.order__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.order__gratitude {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 2.3rem;
+}
+.order__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-top: 1.6rem;
+}
+.order .order__back-btn {
+  background-color: #d87d4a;
+  border: none;
+  color: #fff;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 3.2rem;
+  width: 100%;
+}
+.order__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+}
+.order__items {
+  display: flex;
+  flex-direction: column;
+  background: #f1f1f1;
+  width: 100%;
+  padding-top: 3.3rem;
+  padding-bottom: 2.5rem;
+  margin-top: 2.4rem;
+  position: relative;
+}
+.order .hr {
+  margin-top: 1.2rem;
+  background: #000;
+  mix-blend-mode: normal;
+  opacity: 0.08;
+  height: 1px;
+  width: 81%;
+  align-self: center;
+}
+.order__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 3.5rem;
+  padding-right: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+.order__item__img {
+  width: 2.8rem;
+  height: 3.2rem;
+  margin-right: 2.7rem;
+}
+.order__item__info {
+  margin-right: 5.9rem;
+}
+.order__item__price,
+.order__item .order__item__amount__number {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.order__item .order__item__amount {
+  margin-left: auto;
+}
+.order__item__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+}
+.order__view {
+  border: none;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  align-self: center;
+}
+.order__grand-total {
+  background-color: #000;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-left: 2.4rem;
+  padding-bottom: 1.9rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.order__grand-total__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.order__grand-total__number {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.nonactive {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .checkout {
+    padding: 2.7rem 2.7rem;
+    margin-top: 4.8rem;
+    margin-right: 4rem;
+    width: auto;
+  }
+  .checkout__container {
+    padding: 0;
+    margin: 0;
+  }
+  .checkout__billing form {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .checkout__billing form .checkout__input-elem:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .checkout__billing form .checkout__input-elem:nth-child(2) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .checkout__billing form .checkout__input-elem:nth-child(3) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .checkout__shipping form {
+    display: grid;
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .checkout__shipping form .checkout__input-elem:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+  .checkout__shipping form .checkout__input-elem:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .checkout__shipping form .checkout__input-elem:nth-child(3) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .checkout__shipping form .checkout__input-elem:nth-child(4) {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .checkout__payment form {
+    display: grid;
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .checkout__payment form .label {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .checkout__payment form .checkout__radio-elem:nth-child(1) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .checkout__payment form .checkout__radio-elem:nth-child(2) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .checkout__payment form #money-number {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .checkout__payment form #money-pin {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .checkout h3 {
+    grid-row: 1/2;
+  }
+  .summary {
+    margin-left: 3.9rem;
+    margin-right: 4rem;
+    width: 89.7%;
+  }
+  .order {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    width: 70.3%;
+    margin: auto;
+  }
+  .order__info {
+    flex-direction: row;
+    align-content: center;
+  }
+  .order__items {
+    margin-top: 3.3rem;
+  }
+  .order__grand-total {
+    width: 44%;
+    margin-top: 3.3rem;
+    padding-top: 4.1rem;
+    align-self: stretch;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .checkout-and-summary {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+  .checkout {
+    padding: 2.7rem 2.7rem;
+    margin-top: 14.2rem;
+    margin-left: 16.5rem;
+    margin-right: 0;
+    width: 50%;
+  }
+  .checkout__container {
+    padding: 0;
+    margin: 0;
+  }
+  .checkout__billing form {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .checkout__billing form .checkout__input-elem:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .checkout__billing form .checkout__input-elem:nth-child(2) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .checkout__billing form .checkout__input-elem:nth-child(3) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .checkout__shipping form {
+    display: grid;
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .checkout__shipping form .checkout__input-elem:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+  .checkout__shipping form .checkout__input-elem:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .checkout__shipping form .checkout__input-elem:nth-child(3) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .checkout__shipping form .checkout__input-elem:nth-child(4) {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .checkout__payment form {
+    display: grid;
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .checkout__payment form .label {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .checkout__payment form .checkout__radio-elem:nth-child(1) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .checkout__payment form .checkout__radio-elem:nth-child(2) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .checkout__payment form #money-number {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .checkout__payment form #money-pin {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .checkout h3 {
+    grid-row: 1/2;
+  }
+  .summary {
+    width: 24.3%;
+    margin-top: 14.2rem;
+    margin-left: 0;
+  }
+  .order {
+    width: 37.5%;
+    margin: auto;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #fff;
+  height: 100vh;
+  font-family: "Manrope";
+  line-height: 1;
+}
+
+main {
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  -moz-column-gap: 4.2rem;
+       column-gap: 4.2rem;
+  background-color: #000;
+}
+
+.headline {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.cart-container {
+  margin-right: 24px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+hr {
+  position: absolute;
+  top: 9rem;
+  width: 100%;
+  background-color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  left: 0;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    width: 77.08%;
+    margin-left: 16.5rem;
+    justify-content: center;
+  }
+  .headline {
+    order: 0;
+    margin-right: 19.7rem;
+  }
+  .cart-container {
+    order: 2;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.menu-btn {
+  z-index: 1;
+  margin-left: 24px;
+  margin-top: 18px;
+  height: 20px;
+  width: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger.open {
+  transform: rotate(720deg);
+  background-color: transparent;
+}
+.menu-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 3px);
+}
+.menu-btn__burger.open::after {
+  transform: rotate(-45deg) translate(3px, -3.5px);
+}
+
+.nav {
+  overflow-x: hidden;
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  opacity: 0.98;
+  visibility: hidden;
+  z-index: 2;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: #fff;
+  list-style-type: none;
+  padding-right: 1rem;
+  padding-bottom: 35px;
+  transform: translateY(-100%);
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+  transform: translateY(0);
+}
+.nav .menu-nav__item {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  width: 327px;
+  height: 217px;
+  margin-left: 24px;
+  cursor: pointer;
+}
+.nav .menu-nav__img {
+  width: 79.92px;
+  height: 104px;
+}
+.nav .menu-nav__img::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 37.5%;
+  width: 30%;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+.nav .menu-nav__shop {
+  color: #000;
+  opacity: 0.5;
+}
+.nav .menu-nav__shop > span {
+  color: #d87d4a;
+  font-weight: bold;
+  opacity: 1;
+}
+.nav .menu-nav__shop:hover {
+  color: #d87d4a;
+}
+.nav .menu-nav__background {
+  position: absolute;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  width: 100%;
+  height: 165px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.nav .menu-nav__link {
+  color: #000;
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .nav {
+    position: relative;
+    visibility: visible;
+    top: 3.5rem;
+    order: 1;
+  }
+  .nav .menu-nav {
+    display: inline-block;
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav__link {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .nav .menu-nav__link:hover {
+    color: #d87d4a;
+  }
+  .nav .menu-nav__img {
+    display: none;
+  }
+  .nav .menu-nav__background {
+    display: none;
+  }
+  .nav .menu-nav__shop {
+    display: none;
+  }
+}
+.home {
+  height: 600px;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: url("../assets/home/mobile/image-header.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-color: #000;
+}
+.home__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 19.8rem;
+  left: 2.3rem;
+  right: 2.4rem;
+}
+.home__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+.home__product {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #fff;
+  max-width: 32.8rem;
+  align-self: center;
+}
+.home__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin-bottom: 2.8rem;
+  max-width: 32.8rem;
+  align-self: center;
+}
+.home__btn {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #d87d4a;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    background: url("../assets/home/tablet/image-header.jpg") no-repeat;
+    background-size: 100% 100%;
+  }
+  .home__container {
+    row-gap: 2.4rem;
+  }
+  .home__product {
+    max-width: 39.6rem;
+    font-size: 56px;
+  }
+  .home__paragraph {
+    max-width: 34.9rem;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .home {
+    text-align: left;
+    align-items: left;
+    background-image: url("../assets/home/desktop/image-hero.jpg");
+  }
+  .home__container {
+    top: 22.5rem;
+    left: 16.5rem;
+    right: 89.6rem;
+  }
+  .home__paragraph {
+    text-align: left;
+    margin: 0;
+    align-self: flex-start;
+  }
+  .home__btn {
+    align-self: flex-start;
+  }
+  .home__headline {
+    align-self: flex-start;
+    text-align: left;
+    margin: 0;
+    line-height: 40px;
+  }
+  .home__product {
+    align-self: flex-start;
+  }
+}
+.products {
+  margin: 40px 24px auto 24px;
+}
+.products__container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: #fff;
+  margin-bottom: 104px;
+}
+.products__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  width: 327px;
+  height: 217px;
+  margin-bottom: 16px;
+  z-index: 1;
+  cursor: pointer;
+}
+.products__item__background {
+  position: absolute;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  width: 100%;
+  height: 165px;
+  bottom: 0;
+  left: 0;
+}
+.products__item__img {
+  height: 104px;
+  width: 79.9157867432px;
+  border-radius: 0px;
+  z-index: 1;
+}
+.products__item__shop {
+  color: #000;
+  opacity: 0.5;
+  z-index: 1;
+}
+.products__item__shop > span {
+  color: #d87d4a;
+  font-weight: bold;
+  opacity: 1;
+  z-index: 1;
+}
+.products__item__shop:hover {
+  color: #d87d4a;
+}
+.products__item__link {
+  z-index: 1;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .products__container {
+    flex-direction: row;
+    margin-bottom: 9%;
+    gap: 10px;
+  }
+  .products__item {
+    width: 29.03%;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .products__container {
+    flex-direction: row;
+    margin-bottom: 9%;
+    gap: 30px;
+  }
+  .products__item {
+    width: 24.3%;
+    margin-bottom: 0px;
+    height: 284px;
+  }
+  .products__background {
+    height: 204px;
+  }
+}
+.audio-gear {
+  margin: auto 24px 120px 24px;
+}
+.audio-gear__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.audio-gear__img {
+  display: flex;
+  margin-bottom: 24px;
+  height: 300px;
+  margin-bottom: 40px;
+}
+.audio-gear__img > img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  height: auto;
+  flex: 1;
+}
+.audio-gear__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0 20px 0 20px;
+  color: #000;
+  margin-bottom: 32px;
+}
+.audio-gear__headline > span {
+  color: #d87d4a;
+}
+.audio-gear__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .audio-gear__container {
+    margin-bottom: 96px;
+  }
+  .audio-gear__headline {
+    width: 573px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .audio-gear__paragraph {
+    max-width: 573px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .audio-gear__container {
+    margin-bottom: 160px;
+    margin-left: 165px;
+    margin-right: 165px;
+    display: grid;
+    -moz-column-gap: 165px;
+         column-gap: 165px;
+    grid-template-areas: "headline img" "paragraph img";
+  }
+  .audio-gear__headline {
+    grid-area: headline;
+    padding-left: 0;
+    text-align: left;
+    width: 445px;
+    word-break: break-word;
+    padding-right: 30%;
+    align-self: end;
+  }
+  .audio-gear__img {
+    grid-area: img;
+    width: 540px;
+    height: 588px;
+  }
+  .audio-gear__paragraph {
+    grid-area: paragraph;
+    padding-left: 0;
+    text-align: left;
+    width: 445px;
+    align-self: start;
+  }
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #101010;
+}
+.footer__border {
+  width: 101px;
+  height: 4px;
+  background-color: #d87d4a;
+  margin-bottom: 48px;
+}
+.footer__headline {
+  margin-bottom: 48px;
+  font-weight: bold;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.footer__menu > li {
+  list-style: none;
+}
+.footer__menu > li > a {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 48px;
+}
+.footer__copyright {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 48px;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.footer__icons {
+  display: flex;
+  color: #fff;
+  gap: 16px;
+  margin-bottom: 38px;
+}
+.footer__icons span a i:hover {
+  color: #d87d4a;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    padding-left: 40px;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 5fr 1fr;
+  }
+  .footer__border {
+    margin-bottom: 56px;
+  }
+  .footer__headline {
+    grid-row-start: 2;
+    margin-bottom: 32px;
+  }
+  .footer__menu {
+    grid-row-start: 3;
+    flex-direction: row;
+    -moz-column-gap: 34px;
+         column-gap: 34px;
+    margin-bottom: 32px;
+  }
+  .footer__paragraph {
+    grid-row-start: 4;
+    margin: 0;
+    margin-bottom: 80px;
+    text-align: left;
+  }
+  .footer__copyright {
+    grid-row-start: 5;
+    grid-column-start: 1;
+  }
+  .footer__icons {
+    grid-row-start: 5;
+    grid-column-start: 2;
+    justify-self: end;
+    margin-right: 24px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__container {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr 1fr;
+    padding-left: 165px;
+  }
+  .footer__border {
+    grid-column-start: 1;
+  }
+  .footer__headline {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .footer__menu {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    flex-direction: row;
+    -moz-column-gap: 34px;
+         column-gap: 34px;
+    margin-bottom: 32px;
+    justify-self: end;
+    margin-right: 165px;
+  }
+  .footer__icons {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    margin-right: 165px;
+    align-self: end;
+  }
+  .footer__paragraph {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    width: 540px;
+    margin-bottom: 0;
+  }
+  .footer__copyright {
+    margin-top: 56px;
+  }
+}
+.images {
+  margin-top: 8.8rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+.images__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.images__image1 {
+  background: url("../assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image2 {
+  background: url("../assets/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image3 {
+  background: url("../assets/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg") no-repeat;
+  background-size: cover;
+  height: 36.8rem;
+  border-radius: 8px;
+}
+.images__image4 {
+  background: url("../assets/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image5 {
+  background: url("../assets/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image6 {
+  background: url("../assets/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg") no-repeat;
+  background-size: cover;
+  height: 36.8rem;
+  border-radius: 8px;
+}
+.images__image7 {
+  background: url("../assets/product-xx59-headphones/mobile/image-gallery-1.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image8 {
+  background: url("../assets/product-xx59-headphones/mobile/image-gallery-2.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image9 {
+  background: url("../assets/product-xx59-headphones/mobile/image-gallery-3.jpg") no-repeat;
+  background-size: cover;
+  height: 36.8rem;
+  border-radius: 8px;
+}
+.images__image10 {
+  background: url("../assets/product-zx9-speaker/mobile/image-gallery-1.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image11 {
+  background: url("../assets/product-zx9-speaker/mobile/image-gallery-2.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image12 {
+  background: url("../assets/product-zx9-speaker/mobile/image-gallery-3.jpg") no-repeat;
+  background-size: cover;
+  height: 36.8rem;
+  border-radius: 8px;
+}
+.images__image13 {
+  background: url("../assets/product-zx7-speaker/mobile/image-gallery-1.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image14 {
+  background: url("../assets/product-zx7-speaker/mobile/image-gallery-2.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image15 {
+  background: url("../assets/product-zx7-speaker/mobile/image-gallery-3.jpg") no-repeat;
+  background-size: cover;
+  height: 36.8rem;
+  border-radius: 8px;
+}
+.images__image16 {
+  background: url("../assets/product-yx1-earphones/mobile/image-gallery-1.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image17 {
+  background: url("../assets/product-yx1-earphones/mobile/image-gallery-2.jpg") no-repeat;
+  background-size: cover;
+  height: 17.4rem;
+  border-radius: 8px;
+}
+.images__image18 {
+  background: url("../assets/product-yx1-earphones/mobile/image-gallery-3.jpg") no-repeat;
+  background-size: cover;
+  height: 36.8rem;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .images {
+    margin-top: 12rem;
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+  }
+  .images__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .images__image1 {
+    background: url("../assets/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .images__image2 {
+    background: url("../assets/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .images__image3 {
+    background: url("../assets/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+  }
+  .images__image4 {
+    background: url("../assets/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .images__image5 {
+    background: url("../assets/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .images__image6 {
+    background: url("../assets/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+  }
+  .images__image7 {
+    background: url("../assets/product-xx59-headphones/tablet/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .images__image8 {
+    background: url("../assets/product-xx59-headphones/tablet/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .images__image9 {
+    background: url("../assets/product-xx59-headphones/tablet/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+  }
+  .images__image10 {
+    background: url("../assets/product-zx9-speaker/tablet/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .images__image11 {
+    background: url("../assets/product-zx9-speaker/tablet/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .images__image12 {
+    background: url("../assets/product-zx9-speaker/tablet/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+  }
+  .images__image13 {
+    background: url("../assets/product-zx7-speaker/tablet/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .images__image14 {
+    background: url("../assets/product-zx7-speaker/tablet/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .images__image15 {
+    background: url("../assets/product-zx7-speaker/tablet/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+  }
+  .images__image16 {
+    background: url("../assets/product-yx1-earphones/tablet/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .images__image17 {
+    background: url("../assets/product-yx1-earphones/tablet/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .images__image18 {
+    background: url("../assets/product-yx1-earphones/tablet/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .images {
+    margin-top: 16rem;
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+  }
+  .images__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+  .images__image1 {
+    background: url("../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 28rem;
+  }
+  .images__image2 {
+    background: url("../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    height: 28rem;
+  }
+  .images__image3 {
+    background: url("../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+    height: 59rem;
+  }
+  .images__image4 {
+    background: url("../assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 28rem;
+  }
+  .images__image5 {
+    background: url("../assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    height: 28rem;
+  }
+  .images__image6 {
+    background: url("../assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+    height: 59rem;
+  }
+  .images__image7 {
+    background: url("../assets/product-xx59-headphones/desktop/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 28rem;
+  }
+  .images__image8 {
+    background: url("../assets/product-xx59-headphones/desktop/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    height: 28rem;
+  }
+  .images__image9 {
+    background: url("../assets/product-xx59-headphones/desktop/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+    height: 59rem;
+  }
+  .images__image10 {
+    background: url("../assets/product-zx9-speaker/desktop/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 28rem;
+  }
+  .images__image11 {
+    background: url("../assets/product-zx9-speaker/desktop/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    height: 28rem;
+  }
+  .images__image12 {
+    background: url("../assets/product-zx9-speaker/desktop/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+    height: 59rem;
+  }
+  .images__image13 {
+    background: url("../assets/product-zx7-speaker/desktop/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 28rem;
+  }
+  .images__image14 {
+    background: url("../assets/product-zx7-speaker/desktop/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    height: 28rem;
+  }
+  .images__image15 {
+    background: url("../assets/product-zx7-speaker/desktop/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+    height: 59rem;
+  }
+  .images__image16 {
+    background: url("../assets/product-yx1-earphones/desktop/image-gallery-1.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 28rem;
+  }
+  .images__image17 {
+    background: url("../assets/product-yx1-earphones/desktop/image-gallery-2.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    height: 28rem;
+  }
+  .images__image18 {
+    background: url("../assets/product-yx1-earphones/desktop/image-gallery-3.jpg") no-repeat;
+    background-size: cover;
+    grid-column-start: 2;
+    grid-row: 1/3;
+    height: 59rem;
+  }
+}
+.choice {
+  margin-top: 12rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+.choice__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+.choice__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  color: #000;
+}
+.choice__options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5.6rem;
+}
+.choice__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+.choice__img {
+  background: #f1f1f1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.2rem;
+  padding-bottom: 1.3rem;
+}
+.choice__name {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  color: #000;
+}
+.choice__link {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  background-color: #d87d4a;
+  align-self: center;
+}
+.choice__link:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .choice {
+    padding-left: 3.9rem;
+    padding-right: 3.8rem;
+  }
+  .choice__options {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .choice__img {
+    height: 31.8rem;
+    width: 22.3rem;
+    flex-grow: 1;
+    padding: 0;
+  }
+  .choice__img img {
+    min-width: 17.552rem;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .choice {
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+  }
+  .choice__options {
+    flex-direction: row;
+  }
+  .choice__img {
+    width: 35rem;
+    flex-grow: 1;
+  }
+}
+.back-btn {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-top: 1.6rem;
+  margin-left: 2.4rem;
+}
+
+.main-product {
+  padding: 2.4rem;
+}
+.main-product__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main-product__img-xx99-mark2 {
+  width: 32.7rem;
+  height: 32.7rem;
+  background: url("../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg") no-repeat;
+  background-size: cover;
+  margin-bottom: 3.2rem;
+}
+.main-product__img-xx99-mark1 {
+  width: 32.7rem;
+  height: 32.7rem;
+  background: url("../assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg") no-repeat;
+  background-size: cover;
+  margin-bottom: 3.2rem;
+}
+.main-product__img-xx59 {
+  width: 32.7rem;
+  height: 32.7rem;
+  background: url("../assets/product-xx59-headphones/mobile/image-category-page-preview.jpg") no-repeat;
+  background-size: cover;
+  margin-bottom: 3.2rem;
+}
+.main-product__img-zx9-speaker {
+  background: url("../assets/product-zx9-speaker/mobile/image-category-page-preview.jpg") no-repeat;
+  background-size: cover;
+  margin-bottom: 3.2rem;
+  width: 32.7rem;
+  height: 32.7rem;
+}
+.main-product__img-zx7-speaker {
+  background: url("../assets/product-zx7-speaker/mobile/image-category-page-preview.jpg") no-repeat;
+  background-size: cover;
+  margin-bottom: 3.2rem;
+  width: 32.7rem;
+  height: 32.7rem;
+}
+.main-product__img-yx1-earphone {
+  background: url("../assets//product-yx1-earphones/mobile/image-category-page-preview.jpg") no-repeat;
+  background-size: cover;
+  margin-bottom: 3.2rem;
+  width: 32.7rem;
+  height: 32.7rem;
+}
+.main-product__status {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #d87d4a;
+  margin-bottom: 2.4rem;
+}
+.main-product__headline {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 2.4rem;
+}
+.main-product__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 2.4rem;
+}
+.main-product__price {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 3.1rem;
+}
+.main-product__cart-container {
+  display: flex;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+}
+.main-product__cart-container__amount {
+  display: flex;
+  padding: 1.5rem;
+  background: #f1f1f1;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.main-product__cart-container__amount__plus, .main-product__cart-container__amount__minus {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  cursor: pointer;
+}
+.main-product__cart-container__amount__number {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+}
+.main-product__cart-container__add {
+  padding: 1.5rem 3.05rem 1.5rem 3.45rem;
+  border: none;
+  background-color: #d87d4a;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+.features {
+  margin-top: 8.8rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+.features__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+.features__container__heading {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  color: #000;
+}
+.features__container__paragraph {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.box {
+  margin-top: 8.8rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+.box__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+.box__container__heading {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  color: #000;
+}
+.box__container__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.box__container__content div {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.box__container__content div span {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #d87d4a;
+  margin-right: 2.1rem;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .back-btn {
+    margin-left: 4rem;
+    margin-top: 3.3rem;
+  }
+  .main-product {
+    padding-right: 3.95rem;
+    padding-left: 3.9rem;
+  }
+  .main-product__container {
+    flex-direction: row;
+    -moz-column-gap: 6.9rem;
+         column-gap: 6.9rem;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .main-product__img-xx99-mark2 {
+    background: url("../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 28.1rem;
+    height: 48rem;
+  }
+  .main-product__img-xx99-mark1 {
+    background: url("../assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 28.1rem;
+    height: 48rem;
+  }
+  .main-product__img-xx59 {
+    background: url("../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 28.1rem;
+    height: 48rem;
+  }
+  .main-product__img-zx9-speaker {
+    background: url("../assets/product-zx9-speaker/tablet/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 28.1rem;
+    height: 48rem;
+  }
+  .main-product__img-zx7-speaker {
+    background: url("../assets/product-zx7-speaker/tablet/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 28.1rem;
+    height: 48rem;
+  }
+  .main-product__img-yx1-earphone {
+    background: url("../assets//product-yx1-earphones/tablet/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 28.1rem;
+    height: 48rem;
+  }
+  .main-product__wrapper {
+    width: 33.95rem;
+  }
+  .box {
+    margin-top: 12rem;
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+  }
+  .box__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .box__container__content {
+    margin-right: 18rem;
+  }
+  .features {
+    margin-top: 12rem;
+    padding-left: 4rem;
+    padding-right: 3.9rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .back-btn {
+    margin-top: 7.9rem;
+    margin-left: 16.5rem;
+  }
+  .main-product {
+    margin-top: 5.6rem;
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+  }
+  .main-product__container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    -moz-column-gap: 12.4rem;
+         column-gap: 12.4rem;
+  }
+  .main-product__img-xx99-mark2 {
+    background: url("../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 54rem;
+    height: 56rem;
+  }
+  .main-product__img-xx99-mark1 {
+    background: url("../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 54rem;
+    height: 56rem;
+  }
+  .main-product__img-xx59 {
+    background: url("../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 54rem;
+    height: 56rem;
+  }
+  .main-product__img-zx9-speaker {
+    background: url("../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 54rem;
+    height: 56rem;
+  }
+  .main-product__img-zx7-speaker {
+    background: url("../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg");
+    background-size: 100% 100%;
+    width: 54rem;
+    height: 56rem;
+  }
+  .main-product__img-yx1-earphone {
+    background: url("../assets//product-yx1-earphones/desktop/image-category-page-preview.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 54rem;
+    height: 56rem;
+  }
+  .features-box {
+    display: flex;
+    -moz-column-gap: 12.5rem;
+         column-gap: 12.5rem;
+    justify-content: space-between;
+  }
+  .box {
+    padding-right: 16.5rem;
+  }
+  .box__container {
+    flex-direction: column;
+    row-gap: 3.2rem;
+    min-width: 38rem;
+    padding: 0;
+    margin: 0;
+  }
+  .features {
+    padding-left: 16.5rem;
+  }
+  .features__container {
+    min-width: 63.5rem;
+  }
+}/*# sourceMappingURL=product-xx99.css.map */

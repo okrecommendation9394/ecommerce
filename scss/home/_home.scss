@@ -1,0 +1,123 @@
+.home {
+  height: 600px;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: url("../assets/home/mobile/image-header.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-color: $secondary-color;
+  &__container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 19.8rem;
+    left: 2.3rem;
+    right: 2.4rem;
+  }
+  &__headline {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+
+    color: $primary-color;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+  &__product {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: $primary-color;
+    max-width: 32.8rem;
+    align-self: center;
+  }
+  &__paragraph {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    margin-bottom: 2.8rem;
+    max-width: 32.8rem;
+    align-self: center;
+  }
+  &__btn {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $primary-color;
+    background-color: $active-color;
+    padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+    align-self: center;
+    justify-self: center;
+  }
+}
+@include media-md {
+  .home {
+    background: url("../assets/home/tablet/image-header.jpg") no-repeat;
+    background-size: 100% 100%;
+    &__container {
+      row-gap: 2.4rem;
+    }
+    &__product {
+      max-width: 39.6rem;
+      //align-self: center;
+      font-size: 56px;
+    }
+    &__paragraph {
+      max-width: 34.9rem;
+      align-self: center;
+    }
+  }
+}
+@include media-lg {
+  .home {
+    text-align: left;
+    align-items: left;
+    background-image: url("../assets/home/desktop/image-hero.jpg");
+    &__container {
+      top: 22.5rem;
+      left: 16.5rem;
+      right: 89.6rem;
+    }
+    &__paragraph {
+      text-align: left;
+      margin: 0;
+      align-self: flex-start;
+    }
+    &__btn {
+      align-self: flex-start;
+    }
+    &__headline {
+      align-self: flex-start;
+      text-align: left;
+      margin: 0;
+      line-height: 40px;
+    }
+    &__product {
+      align-self: flex-start;
+    }
+  }
+}

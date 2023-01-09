@@ -1,0 +1,96 @@
+.earphone-yx1 {
+  margin: 24px 24px 120px 24px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  &__img {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  &__img > img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+    flex: 1;
+  }
+  &__info {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    height: 200px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+  }
+  &__headline {
+    position: absolute;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 41px;
+    left: 24px;
+    color: $secondary-color;
+  }
+  &__link {
+    position: absolute;
+    top: 111px;
+    left: 24px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+    padding: 15px 29.5px 15px 31.5px;
+  }
+}
+@include media-md {
+  .earphone-yx1 {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      height: 320px;
+      margin-bottom: 20%;
+    }
+    &__img {
+      grid-column-start: 1;
+      height: 100%;
+    }
+    &__info {
+      grid-column-start: 2;
+      height: 100%;
+    }
+    &__headline {
+      top: 101px;
+      left: 41px;
+    }
+    &__link {
+      top: 171px;
+      left: 41px;
+    }
+  }
+}
+@include media-lg {
+  .earphone-yx1 {
+    margin-left: 165px;
+    margin-right: 165px;
+    &__container {
+      margin-bottom: 200px;
+    }
+    &__headline {
+      left: 17.5%;
+    }
+    &__link {
+      left: 17.5%;
+    }
+  }
+}

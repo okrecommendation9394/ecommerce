@@ -1,0 +1,196 @@
+@import "../home/config";
+@import "../home/menu";
+@import "../home/home";
+@import "../home/products";
+@import "../home/audio-gear";
+@import "../home/footer";
+.product-type {
+  position: relative;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $primary-color;
+  padding: 3.2rem 8.4rem 3.2rem 8.4rem;
+  background-color: $secondary-color;
+}
+.headphone {
+  padding: 6.4rem 2.4rem 5.6rem 2.4rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2.4rem;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  &__img {
+    width: 32.7rem;
+    height: 35.2rem;
+    &.mark-two {
+      background: url("../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg")
+        no-repeat;
+      background-size: cover;
+    }
+    &.mark-one {
+      background: url("../assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg")
+        no-repeat;
+      background-size: cover;
+    }
+    &.mark-three {
+      background: url("../assets/product-xx59-headphones/mobile/image-category-page-preview.jpg")
+        no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__status {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: $active-color;
+  }
+  &__headline {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-width: 32.7rem;
+    color: $secondary-color;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  &__paragraph {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: $secondary-color;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    max-width: 32.7rem;
+  }
+  &__link {
+    background-color: $active-color;
+    padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+  &__link:hover {
+    opacity: 0.5;
+  }
+}
+@include media-md {
+  .product-type {
+    padding: 10.5rem 24.2rem 9.7rem 24.3rem;
+  }
+  .headphone {
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+    &__paragraph {
+      min-width: 57.2rem;
+    }
+    &__img {
+      min-width: 68.9rem;
+      &.mark-two {
+        background: url("../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &.mark-one {
+        background: url("../assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &.mark-three {
+        background: url("../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+}
+@include media-lg {
+  .product-type {
+    padding: 9.8rem 57.8rem 9.7rem 57.9rem;
+  }
+  .headphone {
+    margin-right: 16.5rem;
+    margin-left: 16.5rem;
+    &__container {
+      flex-direction: row;
+      column-gap: 12.5rem;
+      justify-content: space-around;
+    }
+    &__wrapper {
+      align-items: flex-start;
+    }
+    &__paragraph {
+      text-align: left;
+      width: 44.5rem;
+    }
+    &__headline {
+      text-align: left;
+      padding: 0;
+    }
+    &__img {
+      margin: 0;
+      min-width: 54rem;
+      height: 56rem;
+      &.mark-two {
+        background: url("../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &.mark-one {
+        background: url("../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+        order: 1;
+      }
+      &.mark-three {
+        background: url("../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+  .products {
+    &__container {
+      margin-bottom: 16rem;
+    }
+  }
+}
