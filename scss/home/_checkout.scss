@@ -21,15 +21,14 @@
     row-gap: 0.9rem;
   }
   h2 {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $secondary-color;
+    @include textStyle(700, 28px, 38px, 1px, uppercase, $secondary-color, 1);
     margin-bottom: 3.2rem;
+  }
+  input:focus {
+    outline: none;
+  }
+  .invalid {
+    border: 2px solid red;
   }
   h3 {
     font-family: "Manrope";
@@ -154,6 +153,10 @@
     cursor: pointer;
   }
   &__pay:hover {
+    opacity: 0.8;
+    transition: 1s;
+  }
+  &__pay:disabled {
     opacity: 0.5;
   }
   &__content {
@@ -219,14 +222,15 @@
     align-items: flex-start;
   }
   &__gratitude {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.857143px;
-    text-transform: uppercase;
-    color: $secondary-color;
+    @include textStyle(
+      700,
+      24px,
+      28px,
+      0.857143px,
+      uppercase,
+      $secondary-color,
+      1
+    );
     margin-top: 2.3rem;
   }
   &__paragraph {
@@ -249,6 +253,10 @@
     text-align: center;
     margin-top: 3.2rem;
     width: 100%;
+  }
+  .order__back-btn:hover {
+    opacity: 0.75;
+    transition: 1s;
   }
   &__info {
     display: flex;

@@ -11,7 +11,8 @@ const overlay = document.createElement("div");
 const body = document.querySelector("body");
 const backBtn = document.querySelector(".back-btn");
 let count = 0;
-cartBtn.dataset["count"] = count;
+let amountOfItemsInCart = 0;
+cartBtn.dataset["count"] = amountOfItemsInCart;
 if (!count) {
   cartBtn.classList.add("empty");
 }
@@ -77,10 +78,9 @@ const emptyCartHtml = `
   </div>
 `;
 let totalAmount = 0;
-let amountOfItemsInCart = 0;
+// let amountOfItemsInCart = 0;
 cartBtn.addEventListener("click", () => {
   let localstorageKeys = [];
-  // let amountOfItemsInCart = 0;
   for (let i = 0; i < localStorage.length; i++) {
     localstorageKeys.push(localStorage.key(i).split("-")[0]);
   }
@@ -145,8 +145,6 @@ cartBtn.addEventListener("click", () => {
         Number(
           JSON.parse(localStorage.getItem(key)).price.replace(/[^0-9]/g, "")
         );
-      // total.innerText = `$${totalAmount}`;
-      // cartHeadline.innerText = `Cart(${amountOfItemsInCart})`;
     }
     const total = document.querySelector(".cart__total__amount");
     const cartHeadline = document.querySelector(".cart__headline");
@@ -217,12 +215,10 @@ minus?.addEventListener("click", subtract);
 plus?.addEventListener("click", add);
 function add(e) {
   e.target.previousElementSibling.childNodes[0].data++;
-  // countItemsInCart++;
 }
 function subtract(e) {
   if (e.target.nextElementSibling.childNodes[0].data > 1) {
     e.target.nextElementSibling.childNodes[0].data--;
-    //  countItemsInCart--;
   }
 }
 //checkout section
@@ -360,3 +356,41 @@ if (location.pathname === "/dist/checkout.html") {
     }
   });
 }
+//validation
+const inputs = document.querySelectorAll("input");
+const patterns = {
+  phone: /^[\d]{9,}$/,
+  name: /^[a-z]{3,}$/i,
+  address: /^[a-z\d]{3,}$/,
+  zip: /^[\d]{3,}$/,
+  city: /^[a-z]{3,}$/,
+  country: /^[a-z]{3,}$/,
+  moneynumber: /^[\d]{3,}$/,
+  moneypin: /^[\d]{3,}$/,
+  email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})$/,
+};
+function validate(field, regex) {
+  if (regex.test(field.value)) {
+    field.className = "valid";
+  } else {
+    field.className = "invalid";
+  }
+}
+inputs.forEach((input) => {
+  input.addEventListener("keyup", (e) => {
+    validate(e.target, patterns[e.target.attributes.name.value]);
+    if (e.target.classList.contains("invalid")) {
+      e.target.previousElementSibling.style.color = "red";
+    } else {
+      e.target.previousElementSibling.style.color = "black";
+    }
+    let invalidInputs = [...inputs].some((input) =>
+      input.classList.contains("invalid")
+    );
+    if (invalidInputs) {
+      document.querySelector(".summary__pay").disabled = true;
+    } else {
+      document.querySelector(".summary__pay").disabled = false;
+    }
+  });
+});

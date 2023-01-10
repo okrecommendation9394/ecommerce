@@ -16,62 +16,44 @@
     right: 2.4rem;
   }
   &__headline {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
     text-align: center;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-
-    color: $primary-color;
-
     mix-blend-mode: normal;
     opacity: 0.5;
     margin-bottom: 16px;
+    @include textStyle(400, 14px, 19px, 10px, uppercase, $primary-color, 0.5);
   }
   &__product {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
     text-align: center;
-    letter-spacing: 1.28571px;
-    text-transform: uppercase;
     margin-bottom: 24px;
-    color: $primary-color;
     max-width: 32.8rem;
     align-self: center;
+    @include textStyle(
+      700,
+      36px,
+      58px,
+      1.28571px,
+      uppercase,
+      $primary-color,
+      1
+    );
   }
   &__paragraph {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 25px;
     text-align: center;
-    color: #ffffff;
-    mix-blend-mode: normal;
-    opacity: 0.75;
     margin-bottom: 2.8rem;
     max-width: 32.8rem;
     align-self: center;
+    @include textStyle(500, 15px, 25px, 1px, none, $primary-color, 0.75);
   }
   &__btn {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $primary-color;
     background-color: $active-color;
     padding: 1.5rem 2.95rem 1.5rem 3.15rem;
     align-self: center;
     justify-self: center;
+    @include textStyle(700, 13px, 18px, 1px, uppercase, $primary-color, 1);
+  }
+  &__btn:hover {
+    opacity: 0.75;
+    transition: 1s;
   }
 }
 @include media-md {
@@ -83,7 +65,6 @@
     }
     &__product {
       max-width: 39.6rem;
-      //align-self: center;
       font-size: 56px;
     }
     &__paragraph {

@@ -25,31 +25,22 @@
   }
   &__headline {
     position: absolute;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    @include textStyle(700, 28px, 38px, 2px, uppercase, $secondary-color, 1);
     top: 41px;
     left: 24px;
-    color: $secondary-color;
   }
   &__link {
     position: absolute;
     top: 111px;
     left: 24px;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $secondary-color;
+    @include textStyle(700, 13px, 18px, 1px, uppercase, $secondary-color, 1);
     border: 1px solid $secondary-color;
     padding: 15px 29.5px 15px 31.5px;
+  }
+  &__link:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+    transition: 1s;
   }
 }
 @include media-md {

@@ -246,48 +246,55 @@
   right: 2.4rem;
 }
 .home__headline {
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 16px;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
-  margin-bottom: 16px;
 }
 .home__product {
+  text-align: center;
+  margin-bottom: 24px;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+  line-height: 58px;
   letter-spacing: 1.28571px;
   text-transform: uppercase;
-  margin-bottom: 24px;
   color: #fff;
-  max-width: 32.8rem;
-  align-self: center;
+  opacity: 1;
 }
 .home__paragraph {
+  text-align: center;
+  margin-bottom: 2.8rem;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
-  color: #ffffff;
-  mix-blend-mode: normal;
+  letter-spacing: 1px;
+  text-transform: none;
+  color: #fff;
   opacity: 0.75;
-  margin-bottom: 2.8rem;
-  max-width: 32.8rem;
-  align-self: center;
 }
 .home__btn {
+  background-color: #d87d4a;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  align-self: center;
+  justify-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
@@ -296,10 +303,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
-  background-color: #d87d4a;
-  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
-  align-self: center;
-  justify-self: center;
+  opacity: 1;
+}
+.home__btn:hover {
+  opacity: 0.75;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -448,7 +456,7 @@
   margin-bottom: 32px;
   width: 172.25px;
   height: 207px;
-  z-index: 1;
+  z-index: 2;
 }
 .speaker-zx9__headline {
   text-align: center;
@@ -465,13 +473,15 @@
   z-index: 1;
 }
 .speaker-zx9__paragraph {
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.75;
   margin: 0 24px 23px 24px;
   z-index: 1;
@@ -482,7 +492,20 @@
   border: 1px solid #000;
   padding: 1.5rem 2.95rem 1.5rem 3.15rem;
   background-color: #000;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 1;
   z-index: 1;
+}
+.speaker-zx9__link:hover {
+  opacity: 0.75;
+  transition: 1s;
 }
 .speaker-zx9__circles {
   position: absolute;
@@ -563,9 +586,10 @@
   line-height: 38px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: #000;
+  opacity: 1;
   margin-top: 101px;
   margin-left: 7.33%;
-  color: #000;
   z-index: 10;
 }
 .speaker-zx7__link {
@@ -574,14 +598,20 @@
   font-weight: 700;
   font-size: 13px;
   line-height: 18px;
-  width: 175px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: #000;
+  opacity: 1;
   margin-top: 32px;
   margin-left: 7.33%;
-  color: #000;
   border: 1px solid #000;
+  width: 175px;
   padding: 15px 29.5px 15px 31.5px;
+}
+.speaker-zx7__link:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -636,9 +666,10 @@
   line-height: 38px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: #000;
+  opacity: 1;
   top: 41px;
   left: 24px;
-  color: #000;
 }
 .earphone-yx1__link {
   position: absolute;
@@ -652,8 +683,14 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000;
+  opacity: 1;
   border: 1px solid #000;
   padding: 15px 29.5px 15px 31.5px;
+}
+.earphone-yx1__link:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -792,6 +829,28 @@
     align-self: start;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .footer__container {
   display: flex;
   flex-direction: column;
@@ -827,30 +886,39 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
+}
+.footer__menu > li > a:hover {
+  color: #d87d4a;
+  transition: 1s;
 }
 .footer__paragraph {
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 48px;
 }
 .footer__copyright {
+  margin-bottom: 48px;
+  color: #fff;
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 25px;
-  margin-bottom: 48px;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
 }
 .footer__icons {
@@ -1200,7 +1268,14 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000;
+  opacity: 1;
   margin-bottom: 3.2rem;
+}
+.checkout input:focus {
+  outline: none;
+}
+.checkout .invalid {
+  border: 2px solid red;
 }
 .checkout h3 {
   font-family: "Manrope";
@@ -1314,6 +1389,14 @@
   color: #fff;
   padding: 1.5rem 5.3rem 1.5rem 5.8rem;
   margin-top: 3.2rem;
+  cursor: pointer;
+}
+.summary__pay:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+.summary__pay:disabled {
+  opacity: 0.5;
 }
 .summary__content {
   margin-top: 3.1rem;
@@ -1387,6 +1470,7 @@
   letter-spacing: 0.857143px;
   text-transform: uppercase;
   color: #000;
+  opacity: 1;
   margin-top: 2.3rem;
 }
 .order__paragraph {
@@ -1409,6 +1493,10 @@
   text-align: center;
   margin-top: 3.2rem;
   width: 100%;
+}
+.order .order__back-btn:hover {
+  opacity: 0.75;
+  transition: 1s;
 }
 .order__info {
   display: flex;
@@ -1975,48 +2063,55 @@
   right: 2.4rem;
 }
 .home__headline {
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 16px;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
-  margin-bottom: 16px;
 }
 .home__product {
+  text-align: center;
+  margin-bottom: 24px;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+  line-height: 58px;
   letter-spacing: 1.28571px;
   text-transform: uppercase;
-  margin-bottom: 24px;
   color: #fff;
-  max-width: 32.8rem;
-  align-self: center;
+  opacity: 1;
 }
 .home__paragraph {
+  text-align: center;
+  margin-bottom: 2.8rem;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
-  color: #ffffff;
-  mix-blend-mode: normal;
+  letter-spacing: 1px;
+  text-transform: none;
+  color: #fff;
   opacity: 0.75;
-  margin-bottom: 2.8rem;
-  max-width: 32.8rem;
-  align-self: center;
 }
 .home__btn {
+  background-color: #d87d4a;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  align-self: center;
+  justify-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
@@ -2025,10 +2120,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
-  background-color: #d87d4a;
-  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
-  align-self: center;
-  justify-self: center;
+  opacity: 1;
+}
+.home__btn:hover {
+  opacity: 0.75;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -2257,6 +2353,28 @@
     align-self: start;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .footer__container {
   display: flex;
   flex-direction: column;
@@ -2292,30 +2410,39 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
+}
+.footer__menu > li > a:hover {
+  color: #d87d4a;
+  transition: 1s;
 }
 .footer__paragraph {
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 48px;
 }
 .footer__copyright {
+  margin-bottom: 48px;
+  color: #fff;
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 25px;
-  margin-bottom: 48px;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
 }
 .footer__icons {
@@ -3519,48 +3646,55 @@
   right: 2.4rem;
 }
 .home__headline {
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 16px;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
-  margin-bottom: 16px;
 }
 .home__product {
+  text-align: center;
+  margin-bottom: 24px;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+  line-height: 58px;
   letter-spacing: 1.28571px;
   text-transform: uppercase;
-  margin-bottom: 24px;
   color: #fff;
-  max-width: 32.8rem;
-  align-self: center;
+  opacity: 1;
 }
 .home__paragraph {
+  text-align: center;
+  margin-bottom: 2.8rem;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
-  color: #ffffff;
-  mix-blend-mode: normal;
+  letter-spacing: 1px;
+  text-transform: none;
+  color: #fff;
   opacity: 0.75;
-  margin-bottom: 2.8rem;
-  max-width: 32.8rem;
-  align-self: center;
 }
 .home__btn {
+  background-color: #d87d4a;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  align-self: center;
+  justify-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
@@ -3569,10 +3703,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
-  background-color: #d87d4a;
-  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
-  align-self: center;
-  justify-self: center;
+  opacity: 1;
+}
+.home__btn:hover {
+  opacity: 0.75;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -3801,6 +3936,28 @@
     align-self: start;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .footer__container {
   display: flex;
   flex-direction: column;
@@ -3836,30 +3993,39 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
+}
+.footer__menu > li > a:hover {
+  color: #d87d4a;
+  transition: 1s;
 }
 .footer__paragraph {
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 48px;
 }
 .footer__copyright {
+  margin-bottom: 48px;
+  color: #fff;
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 25px;
-  margin-bottom: 48px;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
 }
 .footer__icons {
@@ -3952,15 +4118,16 @@
 }
 .product-type {
   position: relative;
+  text-align: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
   padding: 3.2rem 8.4rem 3.2rem 8.4rem;
   background-color: #000;
 }
@@ -3991,41 +4158,45 @@
   background-size: cover;
 }
 .earphone__status {
+  text-align: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #d87d4a;
+  opacity: 1;
 }
 .earphone__headline {
+  text-align: center;
+  min-width: 32.7rem;
+  padding-left: 10%;
+  padding-right: 10%;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  min-width: 32.7rem;
   color: #000;
-  padding-left: 10%;
-  padding-right: 10%;
+  opacity: 1;
 }
 .earphone__paragraph {
+  text-align: center;
+  mix-blend-mode: normal;
+  max-width: 32.7rem;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #000;
-  mix-blend-mode: normal;
   opacity: 0.5;
-  max-width: 32.7rem;
 }
 .earphone__link {
   background-color: #d87d4a;
@@ -4038,9 +4209,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
 }
 .earphone__link:hover {
   opacity: 0.5;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -4332,48 +4505,55 @@
   right: 2.4rem;
 }
 .home__headline {
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 16px;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
-  margin-bottom: 16px;
 }
 .home__product {
+  text-align: center;
+  margin-bottom: 24px;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+  line-height: 58px;
   letter-spacing: 1.28571px;
   text-transform: uppercase;
-  margin-bottom: 24px;
   color: #fff;
-  max-width: 32.8rem;
-  align-self: center;
+  opacity: 1;
 }
 .home__paragraph {
+  text-align: center;
+  margin-bottom: 2.8rem;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
-  color: #ffffff;
-  mix-blend-mode: normal;
+  letter-spacing: 1px;
+  text-transform: none;
+  color: #fff;
   opacity: 0.75;
-  margin-bottom: 2.8rem;
-  max-width: 32.8rem;
-  align-self: center;
 }
 .home__btn {
+  background-color: #d87d4a;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  align-self: center;
+  justify-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
@@ -4382,10 +4562,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
-  background-color: #d87d4a;
-  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
-  align-self: center;
-  justify-self: center;
+  opacity: 1;
+}
+.home__btn:hover {
+  opacity: 0.75;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -4614,6 +4795,28 @@
     align-self: start;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .footer__container {
   display: flex;
   flex-direction: column;
@@ -4649,30 +4852,39 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
+}
+.footer__menu > li > a:hover {
+  color: #d87d4a;
+  transition: 1s;
 }
 .footer__paragraph {
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 48px;
 }
 .footer__copyright {
+  margin-bottom: 48px;
+  color: #fff;
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 25px;
-  margin-bottom: 48px;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
 }
 .footer__icons {
@@ -4765,15 +4977,16 @@
 }
 .product-type {
   position: relative;
+  text-align: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
   padding: 3.2rem 8.4rem 3.2rem 8.4rem;
   background-color: #000;
 }
@@ -4817,34 +5030,37 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #d87d4a;
+  opacity: 1;
 }
 .headphone__headline {
+  text-align: center;
+  min-width: 32.7rem;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  min-width: 32.7rem;
   color: #000;
+  opacity: 1;
   padding-left: 10%;
   padding-right: 10%;
 }
 .headphone__paragraph {
+  text-align: center;
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #000;
-  mix-blend-mode: normal;
   opacity: 0.5;
   max-width: 32.7rem;
 }
@@ -4859,9 +5075,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
 }
 .headphone__link:hover {
   opacity: 0.5;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -5174,48 +5392,55 @@
   right: 2.4rem;
 }
 .home__headline {
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-bottom: 16px;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
-  margin-bottom: 16px;
 }
 .home__product {
+  text-align: center;
+  margin-bottom: 24px;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+  line-height: 58px;
   letter-spacing: 1.28571px;
   text-transform: uppercase;
-  margin-bottom: 24px;
   color: #fff;
-  max-width: 32.8rem;
-  align-self: center;
+  opacity: 1;
 }
 .home__paragraph {
+  text-align: center;
+  margin-bottom: 2.8rem;
+  max-width: 32.8rem;
+  align-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
-  color: #ffffff;
-  mix-blend-mode: normal;
+  letter-spacing: 1px;
+  text-transform: none;
+  color: #fff;
   opacity: 0.75;
-  margin-bottom: 2.8rem;
-  max-width: 32.8rem;
-  align-self: center;
 }
 .home__btn {
+  background-color: #d87d4a;
+  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
+  align-self: center;
+  justify-self: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
@@ -5224,10 +5449,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
-  background-color: #d87d4a;
-  padding: 1.5rem 2.95rem 1.5rem 3.15rem;
-  align-self: center;
-  justify-self: center;
+  opacity: 1;
+}
+.home__btn:hover {
+  opacity: 0.75;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -5456,6 +5682,28 @@
     align-self: start;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .footer__container {
   display: flex;
   flex-direction: column;
@@ -5491,30 +5739,39 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
+}
+.footer__menu > li > a:hover {
+  color: #d87d4a;
+  transition: 1s;
 }
 .footer__paragraph {
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 48px;
 }
 .footer__copyright {
+  margin-bottom: 48px;
+  color: #fff;
+  mix-blend-mode: normal;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 25px;
-  margin-bottom: 48px;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #fff;
-  mix-blend-mode: normal;
   opacity: 0.5;
 }
 .footer__icons {
@@ -5607,17 +5864,18 @@
 }
 .product-type {
   position: relative;
+  text-align: center;
+  padding: 3.2rem 8.4rem 3.2rem 8.4rem;
+  background-color: #000;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
-  padding: 3.2rem 8.4rem 3.2rem 8.4rem;
-  background-color: #000;
+  opacity: 1;
 }
 
 .speaker {
@@ -5650,41 +5908,45 @@
   background-size: cover;
 }
 .speaker__status {
+  text-align: center;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #d87d4a;
+  opacity: 1;
 }
 .speaker__headline {
+  text-align: center;
+  min-width: 32.7rem;
+  padding-left: 10%;
+  padding-right: 10%;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  min-width: 32.7rem;
   color: #000;
-  padding-left: 10%;
-  padding-right: 10%;
+  opacity: 1;
 }
 .speaker__paragraph {
+  text-align: center;
+  mix-blend-mode: normal;
+  max-width: 32.7rem;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
   color: #000;
-  mix-blend-mode: normal;
   opacity: 0.5;
-  max-width: 32.7rem;
 }
 .speaker__link {
   background-color: #d87d4a;
@@ -5697,9 +5959,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 1;
 }
 .speaker__link:hover {
   opacity: 0.5;
+  transition: 1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -5798,9 +6062,11 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  height: 8.9rem;
   -moz-column-gap: 4.2rem;
        column-gap: 4.2rem;
   padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
   background-color: #000;
 }
 
@@ -5855,6 +6121,9 @@ main {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    height: 9.6rem;
+  }
   .headline {
     margin: 0px;
   }
@@ -5868,6 +6137,7 @@ main {
     align-items: center;
     padding-top: 0;
     padding-bottom: 3.3rem;
+    height: 9.6rem;
   }
   .headline {
     order: 0;

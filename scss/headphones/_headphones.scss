@@ -6,15 +6,8 @@
 @import "../home/footer";
 .product-type {
   position: relative;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
   text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $primary-color;
+  @include textStyle(700, 28px, 38px, 2px, uppercase, $primary-color, 1);
   padding: 3.2rem 8.4rem 3.2rem 8.4rem;
   background-color: $secondary-color;
 }
@@ -55,56 +48,29 @@
   }
 
   &__status {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    color: $active-color;
+    @include textStyle(400, 14px, 19px, 10px, uppercase, $active-color, 1);
   }
   &__headline {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
     text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase;
     min-width: 32.7rem;
-    color: $secondary-color;
+    @include textStyle(700, 28px, 38px, 1px, uppercase, $secondary-color, 1);
     padding-left: 10%;
     padding-right: 10%;
   }
   &__paragraph {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 25px;
     text-align: center;
-    color: $secondary-color;
     mix-blend-mode: normal;
-    opacity: 0.5;
+    @include textStyle(500, 15px, 25px, 1px, none, $secondary-color, 0.5);
     max-width: 32.7rem;
   }
   &__link {
     background-color: $active-color;
     padding: 1.5rem 2.95rem 1.5rem 3.15rem;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $primary-color;
+    @include textStyle(700, 13px, 18px, 1px, uppercase, $primary-color, 1);
   }
   &__link:hover {
     opacity: 0.5;
+    transition: 1s;
   }
 }
 @include media-md {

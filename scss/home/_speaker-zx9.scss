@@ -7,18 +7,13 @@
     align-items: center;
     border-radius: 8px;
     height: 600px;
-    // background-image: url("../assets/cart/Group 4.png");
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-position: left top;
-    // background-size: cover;
   }
   &__img {
     margin-top: 55px;
     margin-bottom: 32px;
     width: 172.25px;
     height: 207px;
-    z-index: 1;
+    z-index: 2;
   }
   &__headline {
     text-align: center;
@@ -35,14 +30,8 @@
     z-index: 1;
   }
   &__paragraph {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 25px;
-    color: $primary-color;
     mix-blend-mode: normal;
-    opacity: 0.75;
+    @include textStyle(500, 15px, 25px, 1px, none, $primary-color, 0.75);
     margin: 0 24px 23px 24px;
     z-index: 1;
     width: 280px;
@@ -52,8 +41,12 @@
     border: 1px solid $secondary-color;
     padding: 1.5rem 2.95rem 1.5rem 3.15rem;
     background-color: $secondary-color;
-    @include textStyle(700, 13px, 18px, 1px, uppercase, $primary-color);
+    @include textStyle(700, 13px, 18px, 1px, uppercase, $primary-color, 1);
     z-index: 1;
+  }
+  &__link:hover {
+    opacity: 0.75;
+    transition: 1s;
   }
   &__circles {
     position: absolute;
@@ -69,13 +62,10 @@
     &__container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      //grid-template-rows: repeat(4, 1fr);
       grid-template-rows: repeat(4, 25%);
       column-gap: 13.828rem;
-      // grid-template-areas: "img headline" "img paragraph" "img btn";
     }
     &__headline {
-      // margin: 13.3rem 0 0 0;
       text-align: left;
       grid-row-start: 2;
       grid-column-start: 2;
@@ -97,9 +87,7 @@
       align-self: start;
     }
     &__img {
-      //margin: 0;
       grid-row-start: 1;
-      //margin-top: auto;
       transform: translate(15%, 61%);
       align-self: end;
       grid-column-start: 1;

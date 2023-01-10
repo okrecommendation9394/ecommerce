@@ -1,3 +1,4 @@
+@import "./config";
 .footer {
   &__container {
     display: flex;
@@ -26,42 +27,24 @@
     list-style: none;
   }
   &__menu > li > a {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: $primary-color;
+    @include textStyle(700, 13px, 25px, 2px, uppercase, $primary-color, 1);
+  }
+  &__menu > li > a:hover {
+    color: $active-color;
+    transition: 1s;
   }
   &__paragraph {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 25px;
-    text-align: center;
-    color: $primary-color;
     mix-blend-mode: normal;
-    opacity: 0.5;
+    @include textStyle(500, 15px, 25px, 1px, none, $primary-color, 0.5);
     margin-left: 24px;
     margin-right: 24px;
     margin-bottom: 48px;
   }
   &__copyright {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 25px;
-    // margin-top: 48px;
     margin-bottom: 48px;
-
     color: $primary-color;
-
     mix-blend-mode: normal;
-    opacity: 0.5;
+    @include textStyle(700, 15px, 25px, 1px, none, $primary-color, 0.5);
   }
   &__icons {
     display: flex;
